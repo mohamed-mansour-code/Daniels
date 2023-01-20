@@ -1,0 +1,404 @@
+/* start normalize tag */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+span{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+/* end normalize tag */
+
+/* start fonts */
+
+.ff-p{
+    font-family: 'Poppins', sans-serif;
+}
+.ff-m{
+    font-family: 'Montserrat', sans-serif;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+.fs-13{
+    font-size: .8125rem;
+}
+.fs-16{
+    font-size: 1rem;
+}
+.fs-20px{
+    font-size: 1.25rem;
+}
+.fs-25{
+    font-size: 1.5625rem;
+}
+.fs-30{
+    font-size: 1.875rem;
+}
+.fs-35{
+    font-size: 2.1875rem;
+}
+.fs-40{
+    font-size: 2.5rem;
+}
+.fs-45{
+    font-size: 2.8125rem;
+}
+.fs-50{
+    font-size: 3.125rem;
+}
+.lh-20{
+    line-height: 1.25rem;
+}
+.lh-25{
+    line-height: 1.5625rem;
+}
+.lh-30{
+    line-height: 1.875rem;
+}
+.lh-35{
+    line-height: 2.1875rem;
+}
+.lh-40{
+    line-height: 2.5rem;
+}
+.lh-45{
+    line-height: 2.8125rem;
+}
+.lh-50{
+    line-height: 3.125rem;
+}
+.lh-55{
+    line-height: 3.4375rem;
+}
+.text-main{
+    color: #343434;
+}
+.bg-main{
+    background-color: #343434;
+}
+.text-p{
+    color: #748182;
+}
+.text-nav{
+    color: #111;
+}
+.bg-gray{
+    background: #f7f7f7;
+}
+.fit-content{
+    width: fit-content;
+}
+/* end fonts */ 
+/* ========== start navbar ========== */
+nav .navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #111;
+    transition: .3s 0s width linear;
+}
+nav .navbar-nav .active.nav-link::after{
+    width: 100%;
+}
+
+/* ========== end navbar ========== */
+/* ========== start header ========== */
+header{
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: 0 0 ;
+}
+.layer{
+    background-color: rgb(0 0 0 /.6);
+}
+header ul a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.25rem;
+    font-size: 1.875rem;
+    color: white;
+}
+@media (min-width: 1170px){
+    header h1 {
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+}
+}
+@media only screen and (min-width: 768px){
+    header h1 {
+        font-size: 2.75rem;
+        line-height: 3.3125rem;
+        font-weight: 400;
+    }
+}
+/* h1 animation */
+header h1::after{
+    content: "";
+    animation: h1anime 5s linear 0s infinite normal;
+}
+@keyframes h1anime {
+    0%{
+        content: "Lar |";
+    }
+    4%{
+        content: "Larry |";
+    }
+    8%{
+        content: "Larry Dan |";
+    }
+    12%{
+        content: "Larry Daniels |";
+    }
+    21%{
+        content: "Larry Daniels |";
+    }
+    25%{
+        content: "Larry Dan |";
+    }
+    29%{
+        content: "Larry |";
+    }
+    33%{
+        content: "Lar |";
+    }
+    37%{
+        content: "|";
+    }
+    41%{
+        content: "Dev |";
+    }
+    45%{
+        content: "Develo |";
+    }
+    49%{
+        content: "Developer |";
+    }
+    56%{
+        content: "Developer |";
+    }
+    60%{
+        content: "Develo |";
+    }
+    64%{
+        content: "Dev |";
+    }
+    68%{
+        content: "|";
+    }
+    72%{
+        content: "Des |";
+    }
+    76%{
+        content: "Desig |";
+    }
+    80%{
+        content: "Designer |";
+    }
+    87%{
+        content: "Designer |";
+    }
+    91%{
+        content: "Desig |";
+    }
+    95%{
+        content: "Des |";
+    }
+    100%{
+        content: " |";
+    }
+    
+}
+/* ========== end header ========== */
+
+/* ========== start about ========== */
+.about h2+span{
+    color: #999999;
+}
+.about .bars div{
+    height: 25px;
+    background-color: #F3F3F3;
+}
+.about .bars div p{
+    background-color: #1C1C1C;
+    height: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+}
+.about .bars div:nth-child(2) p{
+    width: 80%;
+}
+.about .bars div:nth-child(3) p{
+    width: 90%;
+}
+.about .button a:first-child{
+    transition: .3s 0s all linear;
+}
+.about .button a:first-child:hover {
+    color: black ;
+    background-color: white ;
+    border-color: black ;
+}
+/* ========== end about ========== */
+
+/* ========== start services ========== */
+.text-box::after{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-image: url("../img/dots.png");
+    background-repeat: repeat;
+    z-index: -1;
+}
+.services .card span,
+.contact .card span{
+    width: 70px;
+    height: 70px;
+    transition: .3s 0s all linear;
+}
+.services .card:hover span,
+.contact .card:hover span{
+    background-color: #343434 !important;
+    color: wheat !important;
+}
+/* ========== end services ========== */
+
+/* ========== start portfolio ========== */
+.portfolio .nav-pills .nav-link::after, .nav-pills .show>.nav-link{
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 2px;
+   width: 0;
+   background-color: black;
+   transition: .3s 0s width linear;
+}
+.portfolio .nav-pills .active.nav-link::after, .nav-pills .show>.nav-link{
+    width: 100%;
+}
+.portfolio .content{
+    inset: 10px;
+    opacity: 0;
+    transition: .3s 0s all linear;
+    transform: translateY(5px);
+    background-color: rgb(255 255 255 /.95) !important;
+}
+.portfolio .image:hover .content{
+    opacity: 1;
+    transform: translateY(0);
+}
+.portfolio .image .content h5{
+    transform: translateY(-15px);
+    transition: .3s 0s all linear;
+}
+.portfolio .image .content ul{
+    transform: translateY(15px);
+    transition: .3s 0s all linear;
+}
+.portfolio .image:hover .content h5,
+.portfolio .image:hover .content ul{
+    transform: translateY(0);
+}
+.portfolio .content a{
+    width: 30px;
+    height: 30px;
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    transition: .1s 0s all linear;
+}
+.portfolio .content a:hover{
+    background-color: white;
+    color: #111;
+    border: 1px solid #111;
+}
+.mm{
+    margin-bottom: -30px;
+}
+/* ========== end portfolio ========== */
+
+/* ========== end testmonial ========== */
+.test .carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #869791 !important;
+}
+/* ========== end testmonial ========== */
+
+/* ========== start blog ========== */
+.blog .owl-carousel .image-item{
+    overflow: hidden;
+}
+.blog .owl-carousel .card .image-item img{
+    transition: .3s 0s all linear;
+}
+.blog .owl-carousel .card:hover .image-item img{
+    transform: scale(1.2);
+}
+.blog span{
+    color: #888888 !important;
+}
+.blog .card-body a:last-child:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+/* ========== end blog ========== */
+
+/* ========== start contact ========== */
+textarea{
+    height: 150px;
+}
+.form-control:focus{
+    background-color: #f7f7f7;
+}
+/* ========== end contact ========== */
